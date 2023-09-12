@@ -1,0 +1,47 @@
+.productPageBox{
+    height: 40vw;
+    /* border: 2px solid red; */
+    display: flex;
+}
+
+.productInfo{
+    /* border: 2px solid blue; */
+    width: 50vw;
+    padding-top: 10vw;
+}
+
+.productInfo>h4{
+    font-family: "Montserrat";
+    font-size: 3vw;
+    text-align: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.productInfo>h6{
+    font-family: "Montserrat";
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.productImages>img{
+    /* border: 2px solid green; */
+    width: 50vw;
+    height: 40vw;
+    margin: 2vw;
+}
+
+.description{
+    /* border: 2px solid black; */
+    width: 50vw;
+    height: 15vw;
+    margin: 1vw;
+    padding: 1vw;
+}
+
+.description>h6{
+    font-weight: 250;
+    font-family: "Montserrat";
+}
