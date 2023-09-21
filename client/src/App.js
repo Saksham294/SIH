@@ -14,6 +14,7 @@ import { getAllProducts } from './Actions/productActions';
 import { getCartItems } from './Actions/productActions';
 import MyPurchases from './components/MyPurchases/MyPurchases';
 import Cart from './components/Cart/Cart';
+import Prediction from './components/Prediction/Prediction';
 
 function App() {
   const dispatch = useDispatch();
@@ -46,6 +47,7 @@ function App() {
           <Route path='/product/:id' element={<ProductPage />} />
           <Route path='/cart' element={isAuthenticated? <Cart/>:<Login/>}/>
           <Route path='/myPurchases' element={<MyPurchases/>}/>
+          <Route path="/predict" element={<Prediction/>}/>
         </Routes>
       </Router>
       <Footer/>
