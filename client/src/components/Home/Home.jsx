@@ -96,8 +96,8 @@ const Home = () => {
 
                 <div className="homeDiv1">
                     <div className="homeText">
-                        <Typography variant='h3'>UrbanBazaar</Typography>
-                        <Typography variant='h5'>You deserve the best products</Typography>
+                        <Typography variant='h3'>HerbCart</Typography>
+                        <Typography variant='h5'>All your herbal medicine needs at one place</Typography>
 
                     </div>
                     <div className="homeDiv2">
@@ -108,13 +108,12 @@ const Home = () => {
 
                 <img src={images.imgUrl} className='homeImg'></img>
             </section>
-            
             <section className='homeSection2'>
                 <div className="overlay">
-                    <Typography variant='h3'>Electronics at Best Prices</Typography>
+                    <Typography variant='h3'>Herbs at Best Prices</Typography>
                     <Link to='/allProducts'>
                         <Button variant='contained' color='primary'
-                            sx={{ backgroundColor: "#08d4a4", margin: "2.2vw", fontSize: "1vw", paddingRight: "2vw", paddingLeft: "2vw", paddingTop: "1vw", paddingBottom: "1vw", borderRadius: "1.5vw", position: "absolute", top: "275px", left: "42vw" }}>
+                            sx={{ backgroundColor: "#78b343", margin: "2.2vw", fontSize: "1vw", paddingRight: "2vw", paddingLeft: "2vw", paddingTop: "1vw", paddingBottom: "1vw", borderRadius: "1.5vw", position: "absolute", top: "275px", left: "42vw" }}>
                             Shop Now
                         </Button>
                     </Link>
@@ -138,39 +137,14 @@ const Home = () => {
                 <img className='fashionGuyImg' src={images.imgUrl4} />
                 <img className='fashionImg' src={images.imgUrl3} />
                 <div className="fashionHeadingandDesc">
-                    <Typography variant='h2' className='fashionHeading'> Fashion just a touch away</Typography>
-                    <Typography variant='h5'>Experience fashion at its most convenient. With a simple touch, explore a world of trendy possibilities on UrbanBazaar, bringing your style desires to life</Typography>
+                    <Typography variant='h2' className='fashionHeading'> Herbal Plants at your Fingertips</Typography>
+                    <Typography variant='h5'>Unlock the power of herbal plants for holistic health, right at your fingertips. Nature's wellness, simplified.</Typography>
                     <Link to='/allProducts'>
                         <Button variant='contained' color='primary'
                             sx={{ backgroundColor: "#08d4a4", margin: "2.2vw",marginLeft:"3vw" ,fontSize: "1vw", paddingRight: "2vw", paddingLeft: "2vw", paddingTop: "1vw", paddingBottom: "1vw", borderRadius: "1.5vw"}}>
                             Shop Now
                         </Button>
                     </Link>
-                </div>
-            </section>
-                <section className='topProducts'> 
-                <Typography variant='h3'>Top Rated Products</Typography>
-                {topRatedProducts && topRatedProducts.map((el) => (
-                <ProductCard
-                    heading={el.name}
-                    key={el._id}
-                    img={el.image.url}
-                    subheading={el.description}
-                    price={el.price}
-                    url={el._id}
-                    />)
-                )}
-
-                </section>
-            <section className='homeDecor'>
-                <Typography variant='h3'>Furniture at Lowest Prices</Typography>
-                <div className='homeandFurniture'>
-                    <img src={images.imgUrl6} />
-                    <img src={images.imgUrl7} />
-                    <img src={images.imgUrl8} />
-                    <img src={images.imgUrl9} />
-                    <img src={images.imgUrl10} />
-
                 </div>
             </section>
         </div>

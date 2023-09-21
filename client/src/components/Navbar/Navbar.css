@@ -9,10 +9,14 @@
   font-weight: 500;
   background-color: white;
   font-size: 16px;
-  padding-left: 65vw;
+  padding-left: 60vw;
 
+}
 
-
+.navMain>img{
+  height: 5rem;
+  padding-left: 2rem;
+  margin-top: 0.5rem;
 }
 
 .nav>a>div {
@@ -43,13 +47,13 @@
   bottom: 0;
   left: 0;
 
-  background-color: #08d4a4;
+  background-color: #78b343;
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
 
 .nav>a>div:hover {
-  color: #08d4a4;
+  color: #f8941c;
   cursor: pointer;
 }
 
@@ -64,7 +68,7 @@
 }
 
 .link:hover {
-  color: #08d4a4;
+  color: #f8941c;
 }
 
 .newpost {
@@ -109,7 +113,7 @@
   bottom: 0;
   left: 0;
 
-  background-color: #08d4a4;
+  background-color: #78b343;
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }

@@ -5,7 +5,7 @@ import { Typography } from '@mui/material'
 const Footer = () => {
     return (
         <div className='footer'>
-           <Typography variant='h6' className='footerText'>© 2023 UrbanBazzar. All Rights Reserved.</Typography>
+           <Typography variant='h6' className='footerText'>© 2023 HerbCart. All Rights Reserved.</Typography>
         </div>
     )
 }

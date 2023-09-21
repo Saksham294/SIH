@@ -65,7 +65,7 @@
     margin-left: 2rem;
     margin-top: 1vw;
     font-size: 2vw;
-    color: #08d4a4;
+    color: #78b343;
     font-family: "Montserrat";
 }
 
@@ -79,7 +79,7 @@
     width: 100%;
     height: 40vw;
     position: relative;
-    background: url(https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Z2FkZ2V0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60);
+    background: url(https://plus.unsplash.com/premium_photo-1663099556775-3d70f5ad78ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGVyYmFsJTIwbWVkaWNpbmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60);
     background-size: cover;
     overflow: hidden;
 }
@@ -100,7 +100,7 @@
     font-weight: 400;
     position: absolute;
     top: 200px;
-    left: 350px;
+    left: 450px;
 }
 
 .fashionImg {
@@ -121,7 +121,7 @@
 }
 
 .fashionHeadingandDesc>h5 {
-    color: #08d4a4;
+    color: #78b343;
     width: 40vw;
     margin-left: 3vw;
     font-size: 2vw;
