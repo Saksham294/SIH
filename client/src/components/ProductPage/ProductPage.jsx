@@ -28,7 +28,7 @@ const ProductPage = ({ productId, price, description, rating,image }) => {
                 <img src={product.image.url} alt="" />
             </div>
             <div className="productInfo">
-                <Typography variant='h4'>{product.name}</Typography>
+                <Typography variant='h4'>{product.hindiName}</Typography>
                 <Star stars={4}></Star>
                 <Typography variant='h6'>₹ {product.price}</Typography>
                 <Button onClick={buyHandler} variant='contained' color='primary' sx={{

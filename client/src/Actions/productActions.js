@@ -38,6 +38,27 @@ export const getProduct=(id)=>async(dispatch)=>{
           })
     }
 }
+
+export const getProductByName=(name="")=>async(dispatch)=>{
+  try {
+      dispatch({
+          type:"getProductByNameRequest"
+      })
+  
+      const {data}=await axios.get(`/api/plant?name=${name}`)
+      
+      dispatch({
+          type:"getProductByNameSuccess",
+          payload:data.plant,
+      })
+  } catch (error) {
+      dispatch({
+          type: "getProductByNameFailure",
+          payload: error.response.data.message
+        })
+  }
+}
+
 export const getRecommendedProduct=(productid)=>async(dispatch)=>{
   try {
       dispatch({

@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { cartReducer, userReducer } from './Reducers/userReducer';
 import { getAllProductsReducer, topRatedReducer } from './Reducers/productReducer';
-import { recommendationReducer } from './Reducers/productReducer';
+import { productReducer } from './Reducers/productReducer';
 
 const initialState = {}
 
@@ -11,7 +11,7 @@ const store = configureStore({
     products:getAllProductsReducer,
     cart:cartReducer,
     topRated:topRatedReducer,
-    recommended:recommendationReducer
+    product:productReducer
 
    },
     preloadedState: initialState

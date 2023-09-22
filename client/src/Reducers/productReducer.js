@@ -43,17 +43,16 @@ export const productOperationsReducer = createReducer(initialState, {
         state.error = action.payload;
       },
 })
-export const recommendationReducer=createReducer(initialState,{
-    getRecommendedProductRequest: (state, action) => {
+export const productReducer=createReducer(initialState,{
+    getProductByNameRequest:(state, action) => {
         state.loading = true;
-    }
-    ,
-    getRecommendedProductSuccess: (state, action) => {
+    },
+    getProductByNameSuccess: (state, action) => {
         state.loading=false;
-        state.product=action.payload;
+        state.plant=action.payload;
     }
     ,
-    getRecommendedProductFailure: (state, action) => {
+    getProductByNameFailure: (state, action) => {
         state.loading = false;
         state.error = action.payload;
     }

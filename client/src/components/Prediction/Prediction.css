@@ -15,24 +15,53 @@
     margin-left: 40vw;
 }
 
-.predictionContainer>input{
+.predictionContainer>label>input{
     margin-left: 45vw;
     margin-top: 2vw;
 }
 
+input[type="file"] {
+    display: none;
+    margin-left: 45vw;
+    margin-top: 2vw;
+}
+.imgUpload{
+    /* border: 2px solid red; */
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin-left: 46vw;
+}
+
+.cameraIcon{
+    color: rgb(0, 255, 170);
+    margin-top: 2vw;
+}
 .predictionContainer>.plantName{
 text-align: center;
 margin-top: 1vw;
 font-family: 'Montserrat';
 }
 
-.predictionContainer>button{
-    margin-left: 46vw;
+.predictionContainer>.predictionBtn{
+    cursor: pointer;
+    margin-left: 45vw;
     margin-top: 2vw;
     padding: 0.5vw 2vw 0.5vw;
+    border: none;
+    background-color: antiquewhite;
+    font-family: 'Lato';
+    border-radius: 2vw;
+    font-size: 1.5vw;
 }
 
 .predictionContainer>h6{
     text-align: center;
     margin-top: 1vw;
+}
+
+.predictionContainer>.moreInfoBtn{
+    margin-left: 42vw;
+    margin-top: 2vw;
 }

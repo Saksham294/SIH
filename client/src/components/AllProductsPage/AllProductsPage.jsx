@@ -96,7 +96,7 @@ const AllProductsPage = () => {
 
                     (
                         <ProductCard
-                            heading={item.name}
+                            heading={item.hindiName}
                             subheading={item.description}
                             img={item.image.url}
                             price={item.price}
