@@ -81,10 +81,10 @@ exports.postPlant = async (req, res) => {
 exports.getAllPlants=async(req,res)=>{
     try {
 
-        const plants=await Plant.find({})
+        const products=await Plant.find({})
         res.status(200).json({
             success: true,
-            plants
+            products
         })
         
 
