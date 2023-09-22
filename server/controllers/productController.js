@@ -111,6 +111,36 @@ exports.getPlantById=async(req,res)=>{
     }
 }
 
+exports.getPlantByName=async(req,res)=>{
+    try {
+       //Send matching string name to backend and fetch detail by finding it's id
+
+//use mongodb regex to find matching string
+const plant = await Plant.find({
+    name: { $regex:`${req.query.name}`, $options: "i" },
+  });
+
+  const id=plant[0]._id;
+        if(!plant){
+            return res.status(400).json({
+                success:false,
+                message:"No plant found"
+            })
+        }
+        res.status(200).json({
+            success: true,
+            plant,
+            id
+        })
+        
+    } catch (error) {
+        res.status(400).json({
+            success: false,
+            message: error.message
+        })
+    }
+}
+
 exports.getAllProducts = async (req, res) => {
     try {
         const products = await Product.find({})
