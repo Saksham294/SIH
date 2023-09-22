@@ -28,10 +28,11 @@ const Navbar = () => {
                 fontSize: "2rem", margin: "1.2rem", marginTop: "1.8rem", color: "#08d4a4",
                 ":hover": { cursor: "pointer", color: "#05c498" }
             }} /></Link> : null}
+            <Link to='/predict'>
             <IconButton><CameraAltIcon sx={{
                 fontSize: "2rem", margin: "1.2rem", marginTop: "1.2rem", color: "#78b343",
                 ":hover": { cursor: "pointer", color: "#f8941c" }
-            }}   /> </IconButton>
+            }}   /> </IconButton></Link>
         </div>
     )
 }

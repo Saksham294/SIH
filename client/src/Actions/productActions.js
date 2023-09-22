@@ -5,7 +5,7 @@ export const getAllProducts = () => async (dispatch) => {
       dispatch({
         type: "getAllProductsRequest"
       })
-      const { data } = await axios.get("/api/getAllProducts")
+      const { data } = await axios.get("/api/getAllPlants")
       dispatch({
         type: "getAllProductsSuccess",
         payload: data.products
