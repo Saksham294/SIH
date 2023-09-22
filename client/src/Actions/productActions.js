@@ -24,7 +24,7 @@ export const getProduct=(id)=>async(dispatch)=>{
             type:"getProductRequest"
         })
     
-        const {data}=await axios.get(`/api/product/${id}`)
+        const {data}=await axios.get(`/api/plant/${id}`)
         
         dispatch({
             type:"getProductSuccess",

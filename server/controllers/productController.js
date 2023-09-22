@@ -98,10 +98,10 @@ exports.getAllPlants=async(req,res)=>{
 
 exports.getPlantById=async(req,res)=>{
     try {
-        const plant=await Plant.findById(req.params.id)
+        const product=await Plant.findById(req.params.id)
         res.status(200).json({
             success: true,
-            plant
+            product
         })
     } catch (error) {
         res.status(400).json({
