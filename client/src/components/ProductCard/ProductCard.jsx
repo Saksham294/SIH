@@ -7,7 +7,7 @@ import { addItemToCart, removeItemFromCart } from '../../Actions/productActions'
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-const ProductCard = ({ heading, subheading, img, url, price, inCart }) => {
+const ProductCard = ({ heading, subheading, img, url, price, inCart,hindiName }) => {
 
     const dispatch = useDispatch()
     const { user } = useSelector(state => state.user)

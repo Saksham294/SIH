@@ -5,7 +5,6 @@ import { Typography } from '@mui/material'
 import { useSelector, useDispatch } from 'react-redux'
 import { Button } from '@mui/material';
 import { getRecommendedProduct } from "../../Actions/productActions"
-
 import { useEffect } from "react"
 
 import axios from "axios"
@@ -89,9 +88,7 @@ const AllProductsPage = () => {
             <Typography variant='h3'>Explore, Shop, Enjoy it All!</Typography>
             <div className='allProductsContainer'>
                 <div className="categoriesContainer">
-                    <div className="categories">
-                        <Typography variant='h5'>Categories</Typography>
-                    </div>
+                    
 
                 </div>
                 <div className="productsDisplay">
@@ -109,22 +106,7 @@ const AllProductsPage = () => {
                     ))}
                 </div>
             </div>
-            <div className='recommendedProducts'>
-                <Typography variant='h4'>You may also like</Typography>
-                <Button color='primary' onClick={trainModel}>Model Train</Button>
-                <Button onClick={predict} color='primary'>Predict</Button>
-
-                <h1>product</h1>
-
-                {product && product.map((el) => (
-
-                    <ProductCard
-                        heading={el.name}
-                        img={el.image.url}
-                        subheading={el.description}
-                        price={el.price}
-                        url={el._id} />))}
-            </div>
+            
         </div>
     ) : null
 }

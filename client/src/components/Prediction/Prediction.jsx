@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import './Prediction.css'
 
 const Prediction = () => {
   const [photo, setphoto] = useState();
   const [photopreview, setPhotoPreview] = useState();
   const [predictionResult, setPredictionResult] = useState('');
+  const [plantName,setPlantName]=useState('');
   const [base64, setBase64] = useState("");
+  const [knowMore,setKnowMore]=useState(false);
   const uploadphoto = (e) => {
     const file = e.target.files[0];
     const Reader = new FileReader();
@@ -28,7 +30,7 @@ const Prediction = () => {
 
   const handlesubmit = async () => {
     try {
-      const response = await fetch("https://15a4-35-237-64-17.ngrok.io/predict2", {
+      const response = await fetch("https://242b-35-199-150-201.ngrok.io/predict2", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,7 +40,10 @@ const Prediction = () => {
       if (response.ok) {
         const data = await response.json();
         setPredictionResult(data);
-        console.log(predictionResult.class_name[0]);
+        console.log(data)
+        setPlantName(data.class_name[0]);
+        console.log(plantName)
+        setKnowMore(true);
       }
       else {
         console.error('Error:', response.statusText);
@@ -49,18 +54,17 @@ const Prediction = () => {
     }
   }
   return (
-    <div>
+    <div className='predictionContainer'>
      <Typography variant='h2'>
         Upload Your Image
         </Typography>
       <input type='file' name="plant" accept='image/*' onChange={uploadphoto} />
-      <h3>image</h3>
-      <image src={photopreview} />
-      <button onClick={handlesubmit}>Submit</button>
-      <h4>Results</h4>
-      {predictionResult ? <p>{predictionResult.class_name[0]}</p> : null
-
-      }
+      <Typography variant='h6'>Image</Typography>
+      <img src={photopreview} />
+      <button className='predictionBtn' onClick={handlesubmit}>Submit</button>
+      <Typography variant='h6'>Result</Typography>
+      {predictionResult ? <p className='plantName'>{predictionResult.class_name[0]}</p> : null}
+      {knowMore?<Button variant='contained' color='primary'>अधिक जानकारी के लिए यहां क्लिक करें</Button>:null}
     </div>
   )
 }
