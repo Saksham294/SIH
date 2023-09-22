@@ -1,6 +1,7 @@
 const Product = require("../models/Product")
 const cloudinary = require("cloudinary")
 const User=require("../models/User")
+const Plant=require("../models/Plant")
 
 
 exports.postProduct = async (req, res) => {
@@ -38,6 +39,71 @@ exports.postProduct = async (req, res) => {
 
     } catch (error) {
         console.log(error)
+        res.status(400).json({
+            success: false,
+            message: error.message
+        })
+    }
+}
+
+exports.postPlant = async (req, res) => {
+    try {
+
+        const { name, image, price, description, hindiName } = req.body
+        let plant=await Plant.findOne({ name })
+        if (plant) {
+            return res.status(400).json({
+                success: false,
+                message: "Plant already exists"
+            })
+        }
+        plant = await Plant.create({
+            name,
+            image,
+            price,
+            description,
+            hindiName
+        })
+        res.status(200).json({
+            success: true,
+            message: "Plant posted successfully",
+            plant
+        })
+        
+    } catch (error) {
+        res.status(400).json({
+            success: false,
+            message: error.message
+        })
+    }
+}
+
+exports.getAllPlants=async(req,res)=>{
+    try {
+
+        const plants=await Plant.find({})
+        res.status(200).json({
+            success: true,
+            plants
+        })
+        
+
+    } catch (error) {
+        res.status(400).json({
+            success: false,
+            message: error.message
+        })
+    }
+}
+
+exports.getPlantById=async(req,res)=>{
+    try {
+        const plant=await Plant.findById(req.params.id)
+        res.status(200).json({
+            success: true,
+            plant
+        })
+    } catch (error) {
         res.status(400).json({
             success: false,
             message: error.message
